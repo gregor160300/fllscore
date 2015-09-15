@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="material.min.css">
+    <script src="material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Wide card -->
+    <style>
+        .demo-card-wide.mdl-card {
+            width: 95%;
+            max-width: 648px;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 176px;
+        }
+
+        .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+        }
+
+        .mdl-card__title-text {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title" id="totalscore">0 punten</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <form id="reset">
+
+                    <!--M05-->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" style="background: url('images/M05.png') center no-repeat">
+                            <h2 class="mdl-card__title-text">Carri&egrave;res</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="M05">
+                                <input type="checkbox" id="M05" value="60" class="mdl-checkbox__input" unchecked/>
+                                <span class="mdl-checkbox__label">1+ persoon volledig in sorteergebied</span>
+                            </label>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <h2 class="mdl-card__title-text">60pt</h2>
+                        </div>
+                    </div>
+
+                    <!-- M06 -->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" style="background: url('images/M06.png') center no-repeat">
+                            <h2 class="mdl-card__title-text">Sloopauto&rsquo;s</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="M06-option-1">
+                                <input type="radio" id="M06-option-1" class="mdl-radio__button" name="M06" value="0" checked="checked" />
+                                <span class="mdl-radio__label">Niet gedaan/mislukt</span>
+                            </label>
+                            <br>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="M06-option-2">
+                                <input type="radio" id="M06-option-2" class="mdl-radio__button" name="M06" value="50" />
+                                <span class="mdl-radio__label">Volledig opgevouwen &amp; Volledig in</span>
+                            </label>
+                            <br>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="M06-option-3">
+                                <input type="radio" id="M06-option-3" class="mdl-radio__button" name="M06" value="65" />
+                                <span class="mdl-radio__label">Voorruit &amp; motor juist ge&iuml;nstalleerd</span>
+                            </label>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <h2 class="mdl-card__title-text">50/65pt</h2>
+                        </div>
+                    </div>
+
+                    <!-- M07 -->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" style="background: url('images/M07.png') center no-repeat">
+                            <h2 class="mdl-card__title-text">Schoonmaak</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="M07empty">
+                                <input type="checkbox" id="M07empty" class="mdl-checkbox__input" unchecked/>
+                                <span class="mdl-checkbox__label">Geen plastic in cirkel met dieren</span>
+                            </label>
+                            <br>
+                            <label for="plastic">
+                                <span>Aantal plastic tasjes volledig in &quot;Safety&quot;</span>
+                                <input class="mdl-slider mdl-js-slider" type="range" min="0" max="60" value="0" step="30" tabindex="0" id="plastic" />
+                            </label>
+                            <br>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="M07chicken">
+                                <input type="checkbox" id="M07chicken" class="mdl-checkbox__input" unchecked/>
+                                <span class="mdl-checkbox__label">Kip volledig in kleine cirkel</span>
+                            </label>
+                            <br>
+                            <label for="M07animals">
+                                <span>Aantal dieren volledig in volledig vrije cirkel:</span>
+                                <input class="mdl-slider mdl-js-slider" type="range" min="0" max="60" value="0" step="20" tabindex="0" id="animals" />
+                            </label>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <h2 class="mdl-card__title-text">0 - 155pt</h2>
+                        </div>
+                    </div>
+
+                    <!-- M08 -->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" style="background: url('images/M08.png') center no-repeat">
+                            <h2 class="mdl-card__title-text">Composteren</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="M08-option-1">
+                                <input type="radio" id="M08-option-1" class="mdl-radio__button" name="M08" value="0" checked="checked" />
+                                <span class="mdl-radio__label">Niet gedaan/mislukt</span>
+                            </label>
+                            <br>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="M08-option-2">
+                                <input type="radio" id="M08-option-2" class="mdl-radio__button" name="M08" value="60" />
+                                <span class="mdl-radio__label">Compost uitgestoten, niet volledig in &quot;Safety&quot;</span>
+                            </label>
+                            <br>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="M08-option-3">
+                                <input type="radio" id="M08-option-3" class="mdl-radio__button" name="M08" value="80" />
+                                <span class="mdl-radio__label">Compost uitgestoten &amp; volledig in &quot;Safety&quot;</span>
+                            </label>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <h2 class="mdl-card__title-text">60/80pt</h2>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
